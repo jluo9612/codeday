@@ -1,0 +1,28 @@
+{
+  // Required
+  "manifest_version": 2,
+  "name": "Class AVE Loop",
+  "version": "1.0.0",
+
+  // Recommended
+  "description": "By downloading this extension and allowing the app to gather your grades anonymously, you can see your class average for every assignment on school loop.",
+  "icons": {"128": "icon128.png"},
+  "background": {
+    "script": "background.js"
+  },
+
+  // Pick one (or none)
+  "browser_action": {"browser_action": {
+    "default_icon": { // optional 
+  "19": "images/icon19.png", // optional
+  "38": "images/icon38.png" // optional 
+  }, 
+    "default_title": "Class AVE Loop", // optional; 
+    "default_popup": "popup.html"
+  }
+  },
+  "permissions": [
+    "tabs"
+  ]
+
+}
