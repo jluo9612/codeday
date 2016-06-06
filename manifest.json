@@ -7,22 +7,35 @@
   // Recommended
   "description": "By downloading this extension and allowing the app to gather your grades anonymously, you can see your class average for every assignment on school loop.",
   "icons": {"128": "icon128.png"},
+  "background": {
+    "script": "background.js"
+  },
 
   // Pick one (or none)
-  "browser_action": {"browser_action": { "default_icon": { // optional 
+  "browser_action": {"browser_action": {
+    "default_icon": { // optional 
   "19": "images/icon19.png", // optional
   "38": "images/icon38.png" // optional 
-  }, "default_title": "Class AVE Loop" // optional; 
+  }, 
+    "default_title": "Class AVE Loop", // optional; 
+    "default_popup": "popup.html"
+  }
   },
-   "default_popup": "popupbox1.html"
-  }, "permissions": [
+  "permissions": [
     "tabs"
   ]
 
- // "content_security_policy": "script-src 'self' https://cdn.firebase.com https://*.firebaseio.com https://*.firebaseio-demo.com; object-src 'self'" 
-
-//window.open(href, windowname, 'width=400,height=200,scrollbars=yes');
-
-
-
 }
+
+
+<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+<script>
+// Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAHU4Vkd8sO-Q4vXY28wGr10Z-XTyYZQLY",
+    authDomain: "codeday-a816f.firebaseapp.com",
+    databaseURL: "https://codeday-a816f.firebaseio.com",
+    storageBucket: "gs://codeday-a816f.appspot.com/popupbox1.html",
+  };
+  firebase.initializeApp(config);
+</script>
